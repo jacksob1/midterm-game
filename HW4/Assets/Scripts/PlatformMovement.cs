@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformMovement : MonoBehaviour
 {
     float speed = 2f;
-    float rotation_const = 0.25f;
+    float rotation_const = 0.5f;
     Rigidbody2D body;
     private void Start()
     {
