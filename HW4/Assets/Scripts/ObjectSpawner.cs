@@ -8,7 +8,8 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] GameObject capsule_prefab;
     [SerializeField] GameObject square_prefab;
     [SerializeField] GameObject diamond_prefab;
-    float respawn_time = 5f;
+    [SerializeField] GameObject anvil_prefab;
+    float respawn_time = 6f;
     float time_to_respawn = 0;
     // Start is called before the first frame update
     void Start()
@@ -37,9 +38,13 @@ public class ObjectSpawner : MonoBehaviour
                 {
                     new_obj = Instantiate(square_prefab);
                 }
-                else
+                else if (random <= 95)
                 {
                     new_obj = Instantiate(diamond_prefab);
+                }
+                else
+                {
+                    new_obj = Instantiate(anvil_prefab);
                 }
                 float new_X = Random.Range(-7f, 7f);
                 float new_Y = Random.Range(7f, 10f);
