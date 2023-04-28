@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     float time_remaining = 60f;
     [SerializeField] TMP_Text text;
     [SerializeField] TMP_Text score_text;
+    [SerializeField] AudioSource source;
+
     int score = 0;
     bool game_over = false;
 
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     void EndGame() {
         Debug.Log("Ending Game");
+        source.Play();
         game_over = true;
     }
 
