@@ -10,6 +10,7 @@ public class PlatformMovement : MonoBehaviour
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        EventBus.Subscribe(EventBus.EventType.Restart, ResetPosition);
     }
     // Update is called once per frame
     void Update()
@@ -33,5 +34,13 @@ public class PlatformMovement : MonoBehaviour
             Vector3 rotation = new Vector3(0, 0, -gameObject.transform.rotation.z);
             gameObject.transform.Rotate(rotation);
         }
+    }
+
+    private void ResetPosition()
+    {
+        Vector3 startingPos = new Vector3(0, -3, 0);
+        Quaternion startingRotation = new Quaternion(0, 0, 0, 0);
+        this.gameObject.transform.position = startingPos;
+        this.gameObject.transform.rotation = startingRotation;
     }
 }
