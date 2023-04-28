@@ -41,6 +41,6 @@ public class PlatformMovement : MonoBehaviour
         Vector3 startingPos = new Vector3(0, -3, 0);
         Quaternion startingRotation = new Quaternion(0, 0, 0, 0);
         this.gameObject.transform.position = startingPos;
-        this.gameObject.transform.SetPositionAndRotation(startingPos, startingRotation);
+        this.gameObject.transform.rotation = startingRotation;
     }
 }

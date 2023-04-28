@@ -31,10 +31,10 @@ public class ObjectSpawner : MonoBehaviour
                 {
                     new_obj = Instantiate(circle_prefab);
                 }
-                else if (random <= 33) {
+                else if (random <= 30) {
                     new_obj = Instantiate(capsule_prefab);
                 }
-                else if (random <= 66)
+                else if (random <= 63)
                 {
                     new_obj = Instantiate(square_prefab);
                 }
